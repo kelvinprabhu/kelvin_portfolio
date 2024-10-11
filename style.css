@@ -133,9 +133,9 @@ a:hover {
 .hero-section .dancing {
     font-family: 'Dancing Script', cursive;
     letter-spacing: 1px;
-    font-weight: bolder;
+    font-weight: 900;
     /* or font-weight: 700; */
-    color: #e01818;
+    color: #a8b39f;
     font-size: 26px;
     line-height: 1;
     white-space: nowrap;
