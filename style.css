@@ -399,6 +399,60 @@ body.about-on .about-section {
     z-index: 10;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-content .column {
+        max-width: 100%;
+        flex: 1;
+        text-align: center;
+    }
+
+    .contact-content .left .text,
+    .contact-content .right .text {
+        font-size: 1.3rem;
+    }
+
+    .contact-content .icons .row {
+        justify-content: center;
+    }
+
+    .socialfollow {
+        justify-content: center;
+    }
+
+    .socialfollow .social-icon img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-content .left p {
+        font-size: 0.9rem;
+        padding-right: 0;
+    }
+
+    .contact-content .icons .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-content .right .field input,
+    .contact-content .right .field textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .contact-content .button-area button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
 .contact-section .contact-content .column {
     width: calc(50% - 30px);
 }
@@ -567,6 +621,11 @@ body.contact-on .contact-section {
 @media screen and (max-width: 580px) {
     .contact-section a {
         font-size: 17px;
+    }
+
+    .contact-content {
+        padding: 20px;
+        flex-direction: column;
     }
 
     .contact-section .social a {
@@ -920,6 +979,11 @@ body.nature-on .nature-section {
     width: 75%;
 }
 
+@media (max-width: 768px) {
+    .fxcont {
+        grid-template-columns: auto;
+    }
+}
 
 /* responsive media query start */
 @media (max-width: 1104px) {
@@ -935,7 +999,7 @@ body.nature-on .nature-section {
     }
 }
 
-@media (max-width: 947px) {
+@media (max-width: 800px) {
     .menu-btn {
         display: block;
         z-index: 999;
@@ -1006,6 +1070,7 @@ body.nature-on .nature-section {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+
 
     .skills .skills-content .column,
     .contact .contact-content .column {
@@ -1602,7 +1667,8 @@ main {
     background-color: transparent;
     height: 588px;
     width: 588px;
-    margin: 0 0 0 auto;
+    margin: 0 auto;
+    /* Center align on smaller screens */
     margin-right: -14px;
     display: block;
     position: relative;
@@ -1632,6 +1698,79 @@ main {
     flex-wrap: wrap;
     align-content: space-between;
     position: relative;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .right-part {
+        height: 450px;
+        /* Reduce height */
+        width: 450px;
+        /* Reduce width */
+        margin-right: 0;
+        /* Remove negative margin for better alignment */
+    }
+
+    .right-part::before {
+        height: 30%;
+        /* Adjust glow effect height */
+        width: 50%;
+        /* Adjust glow effect width */
+        right: 25%;
+        /* Adjust positioning for smaller screens */
+        filter: blur(80px);
+        /* Reduce blur for clarity */
+    }
+
+    .right-part .d-flex {
+        gap: 16px;
+        /* Reduce gap between elements */
+    }
+}
+
+@media (max-width: 768px) {
+    .right-part {
+        height: 350px;
+        /* Further reduce height */
+        width: 350px;
+        /* Further reduce width */
+        margin: 0 auto;
+        /* Center align */
+    }
+
+    .right-part::before {
+        height: 25%;
+        width: 45%;
+        right: 20%;
+        filter: blur(60px);
+    }
+
+    .right-part .d-flex {
+        gap: 12px;
+        /* Reduce gap further for compact layout */
+    }
+}
+
+@media (max-width: 576px) {
+    .right-part {
+        height: 280px;
+        /* Compact height for smaller devices */
+        width: 280px;
+    }
+
+    .right-part::before {
+        height: 20%;
+        width: 40%;
+        right: 15%;
+        filter: blur(50px);
+    }
+
+    .right-part .d-flex {
+        gap: 8px;
+        /* Minimal gap for very small screens */
+        align-content: center;
+        /* Center align content */
+    }
 }
 
 .main-grid {
